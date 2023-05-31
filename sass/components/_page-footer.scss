@@ -1,0 +1,28 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $footer-bg-color;
+  text-align: center;
+}
+
+.page-footer__logo {
+  color: $primary-white-color;
+}
+
+.page-footer__social {
+  margin-top: 60px;
+}
+
+.page-footer__text {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $primary-white-color;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.page-footer__form {
+  margin-top: 60px;
+}

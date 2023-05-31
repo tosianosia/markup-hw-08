@@ -1,0 +1,18 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &--secondary {
+    background-color: $secondary-bg-color;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: $title-text-color;
+
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}

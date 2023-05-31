@@ -1,0 +1,19 @@
+.menu-button {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu-button__icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}

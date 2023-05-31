@@ -1,0 +1,39 @@
+body {
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &.menu-open {
+    overflow: hidden;
+  }
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+// h1, h2, h3, h4, h5, h6 {
+//   color: #212121;
+// }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// _reset.scss
+
+// ul {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+// }
+
+// h1, h2, h3, h4, h5, h6, p {
+//   margin-top: 0;
+// }

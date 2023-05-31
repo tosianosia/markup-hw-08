@@ -1,0 +1,26 @@
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include centeredFlex($main-axis: center);
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: $primary-white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.btn-close__icon {
+  fill: currentColor;
+}

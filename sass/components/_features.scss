@@ -1,0 +1,53 @@
+.features {
+  @extend %list;
+}
+
+.features__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.features__thumb {
+  @include centeredFlex($main-axis: center);
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: $secondary-bg-color;
+  border-radius: 4px;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}
+
+// Альтернатива без дополнительного блока
+// .features__icon {
+//   width: 100%;
+//   height: 120px;
+//   padding-top: 25px;
+//   padding-bottom: 25px;
+//   margin-bottom: 30px;
+
+//   background-color: $secondary-bg-color;
+//   border-radius: 4px;
+// }
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $title-text-color;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}

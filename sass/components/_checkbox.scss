@@ -1,0 +1,35 @@
+.checkbox {
+  @include centeredFlex($main-axis: center);
+  margin-bottom: 30px;
+}
+
+.checkbox__input {
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
+  // position: absolute;
+}
+
+.checkbox__icon {
+  flex-shrink: 0;
+  margin-right: 8px;
+
+  border: 2px solid $title-text-color;
+  border-radius: 2px;
+  fill: transparent;
+
+  .checkbox__input:checked + & {
+    border: none;
+    background-color: $accent-color;
+    fill: $primary-white-color;
+  }
+}
+
+.checkbox__label {
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.checkbox__link {
+  color: $accent-color;
+}

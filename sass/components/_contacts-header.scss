@@ -1,0 +1,37 @@
+.contacts-header {
+  @extend %list;
+  margin-bottom: 64px;
+}
+
+.contacts-header__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts-header__link {
+  color: inherit;
+
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &--tel {
+    color: $accent-color;
+    font-size: 34px;
+    line-height: 1.18;
+
+    @include limitedWidth($mobile - 1px) {
+      font-size: 27px;
+    }
+  }
+
+  &--mail {
+    font-size: 24px;
+  }
+}
+
+.contacts-header__icon {
+  display: none;
+}
