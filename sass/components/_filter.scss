@@ -1,13 +1,23 @@
 .filter {
   @extend %list;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: -15px;
   margin-bottom: 40px;
+
+  @include limitedWidth($tablet - 1px) {
+    flex-wrap: wrap;
+    margin-top: -15px;
+  }
+
+  @include breakpoint($tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .filter__item {
-  margin-top: 15px;
+  @include limitedWidth($tablet - 1px) {
+    margin-top: 15px;
+  }
 
   &:not(:last-child) {
     margin-right: 8px;

@@ -33,6 +33,10 @@
   .subscribe__input:focus + &,
   .subscribe__input:not(:placeholder-shown) + & {
     transform: translateY(-45px);
+
+    @include breakpoint($tablet) {
+      transform: translate(-65px, -50%);
+    }
   }
 
   // .subscribe__field:focus-within > &,

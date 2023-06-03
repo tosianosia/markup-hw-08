@@ -4,5 +4,11 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  max-width: $mobile;
+  @include breakpoint($mobile) {
+    width: $mobile;
+  }
+
+  @include breakpoint($tablet) {
+    width: $tablet;
+  }
 }

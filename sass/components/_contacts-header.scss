@@ -1,11 +1,25 @@
 .contacts-header {
   @extend %list;
-  margin-bottom: 64px;
+
+  @include limitedWidth($tablet - 1px) {
+    margin-bottom: 64px;
+  }
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .contacts-header__item {
   &:not(:last-child) {
-    margin-bottom: 32px;
+    @include limitedWidth($tablet - 1px) {
+      margin-bottom: 32px;
+    }
+
+    @include breakpoint($tablet) {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -17,21 +31,42 @@
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  &--tel {
-    color: $accent-color;
-    font-size: 34px;
-    line-height: 1.18;
+  @include limitedWidth($tablet - 1px) {
+    &--tel {
+      color: $accent-color;
+      font-size: 34px;
+      line-height: 1.18;
 
-    @include limitedWidth($mobile - 1px) {
-      font-size: 27px;
+      @include limitedWidth($mobile - 1px) {
+        font-size: 27px;
+      }
+    }
+
+    &--mail {
+      font-size: 24px;
     }
   }
 
-  &--mail {
-    font-size: 24px;
+  @include breakpoint($tablet) {
+    @include centeredFlex();
+    fill: currentColor;
+    font-size: 12px;
+
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 
 .contacts-header__icon {
-  display: none;
+  @include limitedWidth($tablet - 1px) {
+    display: none;
+  }
+
+  @include breakpoint($tablet) {
+    margin-right: 8px;
+  }
 }

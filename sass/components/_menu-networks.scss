@@ -2,6 +2,10 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+
+  @include breakpoint($tablet) {
+    display: none;
+  }
 }
 
 .menu-networks__item {

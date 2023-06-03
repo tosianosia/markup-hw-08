@@ -6,8 +6,12 @@
 }
 
 .clients__item {
-  width: calc((100% - 2 * 30px) / 2);
+  flex-basis: calc((100% - 2 * 30px) / 2);
   margin: 15px;
+
+  @include breakpoint($tablet) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .clients__link {

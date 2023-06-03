@@ -1,12 +1,25 @@
 .features {
   @extend %list;
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .features__item {
-  margin-bottom: 30px;
+  @include limitedWidth($tablet - 1px) {
+    margin-bottom: 30px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 }
 
@@ -44,7 +57,10 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
+
+  @include limitedWidth($tablet - 1px) {
+    text-align: center;
+  }
 }
 
 .features__text {

@@ -41,92 +41,94 @@
             <use href="./images/icons.svg#menu"></use>
           </svg>
         </button>
-      </div>
 
-      <!-- Бургер-меню -->
-      <div class="menu-container" id="menu-container" data-menu>
-        <div class="container menu-container__container">
-          <!-- Кнопка закрытия мобильного меню -->
-          <button
-            type="button"
-            class="menu-button menu-container__menu-button"
-            data-menu-close
-          >
-            <svg
-              class="menu-button__icon"
-              aria-label="Кнопка закрытия мобильного меню"
+        <!-- Бургер-меню -->
+        <div class="menu-container" id="menu-container" data-menu>
+          <div class="menu-container__inner">
+            <!-- Кнопка закрытия мобильного меню -->
+            <button
+              type="button"
+              class="menu-button menu-container__menu-button"
+              data-menu-close
             >
-              <use href="./images/icons.svg#cross"></use>
-            </svg>
-          </button>
+              <svg
+                class="menu-button__icon"
+                aria-label="Кнопка закрытия мобильного меню"
+              >
+                <use href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
 
-          <!-- Основная навигация -->
-          <nav class="page-header__nav">
-            <!-- Ссылки на другие страницы -->
-            <ul class="site-nav">
-              <li class="site-nav__item">
-                <a
-                  href="./index.html"
-                  class="site-nav__link site-nav__link--active"
-                  aria-current="page"
-                >
-                  Студия
-                </a>
-              </li>
-              <li class="site-nav__item">
-                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="" class="site-nav__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+            <!-- Основная навигация -->
+            <nav class="page-header__nav">
+              <!-- Ссылки на другие страницы -->
+              <ul class="site-nav">
+                <li class="site-nav__item">
+                  <a
+                    href="./index.html"
+                    class="site-nav__link site-nav__link--active"
+                    aria-current="page"
+                  >
+                    Студия
+                  </a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="./portfolio.html" class="site-nav__link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a href="" class="site-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
 
-          <div>
-            <!-- Почта и телефон -->
-            <ul class="contacts-header">
-              <li class="contacts-header__item">
-                <a
-                  href="tel:+380961111111"
-                  class="contacts-header__link contacts-header__link--tel"
-                >
-                  <svg class="contacts-header__icon" width="10" height="16">
-                    <use href="./images/icons.svg#smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-              <li class="contacts-header__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="contacts-header__link contacts-header__link--mail"
-                >
-                  <svg class="contacts-header__icon" width="16" height="12">
-                    <use href="./images/icons.svg#envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-            </ul>
+            <div class="menu-container__bottom">
+              <!-- Почта и телефон -->
+              <ul class="contacts-header">
+                <li class="contacts-header__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="contacts-header__link contacts-header__link--tel"
+                  >
+                    <svg class="contacts-header__icon" width="10" height="16">
+                      <use href="./images/icons.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="contacts-header__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="contacts-header__link contacts-header__link--mail"
+                  >
+                    <svg class="contacts-header__icon" width="16" height="12">
+                      <use href="./images/icons.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
 
-            <!-- <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-            <a href="tel:+380961111111">+38 096 111 11 11</a> -->
+              <!-- <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a href="tel:+380961111111">+38 096 111 11 11</a> -->
 
-            <!-- Социальные сети -->
-            <ul class="menu-networks">
-              <li class="menu-networks__item">
-                <a href="" class="menu-networks__link">Instagram</a>
-              </li>
-              <li class="menu-networks__item">
-                <a href="" class="menu-networks__link">Twitter</a>
-              </li>
-              <li class="menu-networks__item">
-                <a href="" class="menu-networks__link">Facebook</a>
-              </li>
-              <li class="menu-networks__item">
-                <a href="" class="menu-networks__link">LinkedIn</a>
-              </li>
-            </ul>
+              <!-- Социальные сети -->
+              <ul class="menu-networks">
+                <li class="menu-networks__item">
+                  <a href="" class="menu-networks__link">Instagram</a>
+                </li>
+                <li class="menu-networks__item">
+                  <a href="" class="menu-networks__link">Twitter</a>
+                </li>
+                <li class="menu-networks__item">
+                  <a href="" class="menu-networks__link">Facebook</a>
+                </li>
+                <li class="menu-networks__item">
+                  <a href="" class="menu-networks__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -210,15 +212,35 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-1/photo-1-tablet.webp    1x,
+                    ./images/team-members/photo-1/photo-1-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-1/photo-1-tablet.jpg    1x,
+                    ./images/team-members/photo-1/photo-1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-1/photo-1-mobile.webp    1x,
                     ./images/team-members/photo-1/photo-1-mobile@2x.webp 2x
                   "
+                  media="(max-width: 767px)"
                   type="image/webp"
                 />
-                <img
+                <source
                   srcset="
+                    ./images/team-members/photo-1/photo-1-mobile.jpg    1x,
                     ./images/team-members/photo-1/photo-1-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+                <img
                   src="./images/team-members/photo-1/photo-1-mobile.jpg"
                   alt="Фото Игоря Демьяненко"
                 />
@@ -280,15 +302,35 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-2/photo-2-tablet.webp    1x,
+                    ./images/team-members/photo-2/photo-2-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-2/photo-2-tablet.jpg    1x,
+                    ./images/team-members/photo-2/photo-2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-2/photo-2-mobile.webp    1x,
                     ./images/team-members/photo-2/photo-2-mobile@2x.webp 2x
                   "
+                  media="(max-width: 767px)"
                   type="image/webp"
                 />
-                <img
+                <source
                   srcset="
+                    ./images/team-members/photo-2/photo-2-mobile.jpg    1x,
                     ./images/team-members/photo-2/photo-2-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+                <img
                   src="./images/team-members/photo-2/photo-2-mobile.jpg"
                   alt="Фото Ольги Репиной"
                 />
@@ -352,15 +394,35 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-3/photo-3-tablet.webp    1x,
+                    ./images/team-members/photo-3/photo-3-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-3/photo-3-tablet.jpg    1x,
+                    ./images/team-members/photo-3/photo-3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-3/photo-3-mobile.webp    1x,
                     ./images/team-members/photo-3/photo-3-mobile@2x.webp 2x
                   "
+                  media="(max-width: 767px)"
                   type="image/webp"
                 />
-                <img
+                <source
                   srcset="
+                    ./images/team-members/photo-3/photo-3-mobile.jpg    1x,
                     ./images/team-members/photo-3/photo-3-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+                <img
                   src="./images/team-members/photo-3/photo-3-mobile.jpg"
                   alt="Фото Николая Тарасова"
                 />
@@ -422,15 +484,35 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-4/photo-4-tablet.webp    1x,
+                    ./images/team-members/photo-4/photo-4-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-4/photo-4-tablet.jpg    1x,
+                    ./images/team-members/photo-4/photo-4-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-4/photo-4-mobile.webp    1x,
                     ./images/team-members/photo-4/photo-4-mobile@2x.webp 2x
                   "
+                  media="(max-width: 767px)"
                   type="image/webp"
                 />
-                <img
+                <source
                   srcset="
+                    ./images/team-members/photo-4/photo-4-mobile.jpg    1x,
                     ./images/team-members/photo-4/photo-4-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+                <img
                   src="./images/team-members/photo-4/photo-4-mobile.jpg"
                   alt="Фото Михаила Ермакова"
                 />
@@ -571,7 +653,7 @@
 
     <!-- Подвал страницы -->
     <footer class="page-footer">
-      <div class="container">
+      <div class="container page-footer__inner">
         <div>
           <!-- Логотип компании -->
           <a href="./index.html" class="logo page-footer__logo" lang="en">

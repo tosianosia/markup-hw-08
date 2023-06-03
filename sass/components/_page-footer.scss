@@ -6,12 +6,21 @@
   text-align: center;
 }
 
+.page-footer__inner {
+  @include breakpoint($tablet) {
+    @include centeredFlex($main-axis: space-around, $cross-axis: baseline);
+    flex-wrap: wrap;
+  }
+}
+
 .page-footer__logo {
   color: $primary-white-color;
 }
 
 .page-footer__social {
-  margin-top: 60px;
+  @include limitedWidth($tablet - 1px) {
+    margin-top: 60px;
+  }
 }
 
 .page-footer__text {
@@ -25,4 +34,8 @@
 
 .page-footer__form {
   margin-top: 60px;
+
+  @include breakpoint($tablet) {
+    width: 450px;
+  }
 }
