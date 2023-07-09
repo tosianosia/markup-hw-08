@@ -10,8 +10,8 @@
 }
 
 .social-networks__link {
-  // display: block;
   @include centeredFlex($main-axis: center);
+  // display: block;
   width: 44px;
   height: 44px;
   // padding: 12px;

@@ -1,12 +1,14 @@
 .hero {
   @include centeredFlex($main-axis: center);
   flex-direction: column;
-  max-width: 480px;
-  min-height: 400px;
+  max-width: $mobile;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   // padding-top: 118px;
   // padding-bottom: 118px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   background-color: $hero-bg-color;
   // если картинка не загрузится
@@ -27,11 +29,11 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-bg/hero-bg-mobile@2x.jpg);
+      url('../images/hero-bg/hero-bg-mobile@2x.jpg');
   }
 
-  @include breakpoint($mobile) {
-    max-width: 768px;
+  @include breakpoint($tablet) {
+    max-width: $tablet;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -45,17 +47,28 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero-bg/hero-bg-tablet@2x.jpg);
+        url('../images/hero-bg/hero-bg-tablet@2x.jpg');
     }
+  }
+
+  @include breakpoint($desktop) {
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/hero-bg/hero-bg-desktop.jpg');
   }
 }
 
 .hero__title {
-  // margin-left: auto;
-  // margin-right: auto;
   max-width: 360px;
   margin-top: 0;
   margin-bottom: 30px;
+  // margin-left: auto;
+  // margin-right: auto;
 
   color: $primary-white-color;
   font-weight: 900;
@@ -63,4 +76,11 @@
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @include breakpoint($desktop) {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

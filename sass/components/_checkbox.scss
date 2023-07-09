@@ -28,6 +28,11 @@
 .checkbox__label {
   font-size: 12px;
   line-height: 1.17;
+
+  @include breakpoint($desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__link {

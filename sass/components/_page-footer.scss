@@ -3,13 +3,26 @@
   padding-bottom: 60px;
 
   background-color: $footer-bg-color;
-  text-align: center;
+
+  @include limitedWidth($desktop - 1px) {
+    text-align: center;
+  }
 }
 
 .page-footer__inner {
   @include breakpoint($tablet) {
     @include centeredFlex($main-axis: space-around, $cross-axis: baseline);
     flex-wrap: wrap;
+  }
+
+  @include breakpoint($desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.page-footer__address {
+  @include breakpoint($tablet) {
+    width: 231px;
   }
 }
 
@@ -20,6 +33,10 @@
 .page-footer__social {
   @include limitedWidth($tablet - 1px) {
     margin-top: 60px;
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: 70px;
   }
 }
 
@@ -37,5 +54,11 @@
 
   @include breakpoint($tablet) {
     width: 450px;
+  }
+
+  @include breakpoint($desktop) {
+    width: 570px;
+    margin-top: 0;
+    margin-left: auto;
   }
 }

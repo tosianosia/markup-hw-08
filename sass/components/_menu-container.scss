@@ -19,7 +19,7 @@
 .menu-container__inner {
   @include limitedWidth($tablet - 1px) {
     position: relative;
-    @include centeredFlex($main-axis: space-between, $cross-axis: flex-start);
+    @include centeredFlex($main-axis: space-between, $cross-axis: stretch);
     // display: flex;
     flex-direction: column;
     height: 100%;
@@ -27,9 +27,9 @@
   }
 
   @include cuttedWidth($mobile, $tablet - 1px) {
+    width: $mobile;
     margin-left: auto;
     margin-right: auto;
-    width: $mobile;
   }
 
   @include breakpoint($tablet) {
@@ -44,7 +44,15 @@
 }
 
 .menu-container__bottom {
+  // @include limitedWidth($tablet - 1px) {
+  //   margin-top: auto;
+  // }
+
   @include breakpoint($tablet) {
     margin-left: 84px;
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: 305px;
   }
 }

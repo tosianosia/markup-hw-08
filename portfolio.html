@@ -58,9 +58,8 @@
                 <use href="./images/icons.svg#cross"></use>
               </svg>
             </button>
-
             <!-- Основная навигация -->
-            <nav class="page-header__nav">
+            <nav>
               <!-- Ссылки на другие страницы -->
               <ul class="site-nav">
                 <li class="site-nav__item">
@@ -89,8 +88,19 @@
                     href="tel:+380961111111"
                     class="contacts-header__link contacts-header__link--tel"
                   >
-                    <svg class="contacts-header__icon" width="10" height="16">
-                      <use href="./images/icons.svg#smartphone"></use>
+                    <svg
+                      class="contacts-header__icon-tablet"
+                      width="10"
+                      height="14"
+                    >
+                      <use href="./images/icons.svg#smartphone-tablet"></use>
+                    </svg>
+                    <svg
+                      class="contacts-header__icon-desktop"
+                      width="10"
+                      height="16"
+                    >
+                      <use href="./images/icons.svg#smartphone-desktop"></use>
                     </svg>
                     +38 096 111 11 11
                   </a>
@@ -100,8 +110,19 @@
                     href="mailto:info@devstudio.com"
                     class="contacts-header__link contacts-header__link--mail"
                   >
-                    <svg class="contacts-header__icon" width="16" height="12">
-                      <use href="./images/icons.svg#envelope"></use>
+                    <svg
+                      class="contacts-header__icon-tablet"
+                      width="14"
+                      height="10"
+                    >
+                      <use href="./images/icons.svg#envelope-tablet"></use>
+                    </svg>
+                    <svg
+                      class="contacts-header__icon-desktop"
+                      width="16"
+                      height="12"
+                    >
+                      <use href="./images/icons.svg#envelope-desktop"></use>
                     </svg>
                     info@devstudio.com
                   </a>
@@ -143,24 +164,24 @@
           <ul class="filter">
             <li class="filter__item">
               <button
-                class="filter__btn filter__btn--current"
                 type="button"
+                class="filter__btn filter__btn--current"
                 aria-current="true"
               >
                 Все
               </button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Веб-сайты</button>
+              <button type="button" class="filter__btn">Веб-сайты</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Приложения</button>
+              <button type="button" class="filter__btn">Приложения</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Дизайн</button>
+              <button type="button" class="filter__btn">Дизайн</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Маркетинг</button>
+              <button type="button" class="filter__btn">Маркетинг</button>
             </li>
           </ul>
           <!--можно сверстать без списка,
@@ -172,6 +193,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-1/picture-1-desktop.webp    1x,
+                        ./images/works/picture-1/picture-1-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-1/picture-1-desktop.jpg    1x,
+                        ./images/works/picture-1/picture-1-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-1/picture-1-tablet.webp    1x,
@@ -205,6 +241,7 @@
                     <img
                       src="./images/works/picture-1/picture-1-mobile.jpg"
                       alt="Сайт на экране ноутбука"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -226,6 +263,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-2/picture-2-desktop.webp    1x,
+                        ./images/works/picture-2/picture-2-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-2/picture-2-desktop.jpg    1x,
+                        ./images/works/picture-2/picture-2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-2/picture-2-tablet.webp    1x,
@@ -259,6 +311,7 @@
                     <img
                       src="./images/works/picture-2/picture-2-mobile.jpg"
                       alt="Два баскетболиста с мячом"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -282,6 +335,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-3/picture-3-desktop.webp    1x,
+                        ./images/works/picture-3/picture-3-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-3/picture-3-desktop.jpg    1x,
+                        ./images/works/picture-3/picture-3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-3/picture-3-tablet.webp    1x,
@@ -315,6 +383,7 @@
                     <img
                       src="./images/works/picture-3/picture-3-mobile.jpg"
                       alt="Логотип ресторана"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -338,6 +407,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-4/picture-4-desktop.webp    1x,
+                        ./images/works/picture-4/picture-4-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-4/picture-4-desktop.jpg    1x,
+                        ./images/works/picture-4/picture-4-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-4/picture-4-tablet.webp    1x,
@@ -371,6 +455,7 @@
                     <img
                       src="./images/works/picture-4/picture-4-mobile.jpg"
                       alt="Беспроводные наушники"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -394,6 +479,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-5/picture-5-desktop.webp    1x,
+                        ./images/works/picture-5/picture-5-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-5/picture-5-desktop.jpg    1x,
+                        ./images/works/picture-5/picture-5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-5/picture-5-tablet.webp    1x,
@@ -427,6 +527,7 @@
                     <img
                       src="./images/works/picture-5/picture-5-mobile.jpg"
                       alt="Две коробки на белом фоне"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -450,6 +551,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-6/picture-6-desktop.webp    1x,
+                        ./images/works/picture-6/picture-6-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-6/picture-6-desktop.jpg    1x,
+                        ./images/works/picture-6/picture-6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-6/picture-6-tablet.webp    1x,
@@ -483,6 +599,7 @@
                     <img
                       src="./images/works/picture-6/picture-6-mobile.jpg"
                       alt="Сайт на экране монитора"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -506,6 +623,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-7/picture-7-desktop.webp    1x,
+                        ./images/works/picture-7/picture-7-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-7/picture-7-desktop.jpg    1x,
+                        ./images/works/picture-7/picture-7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-7/picture-7-tablet.webp    1x,
@@ -539,6 +671,7 @@
                     <img
                       src="./images/works/picture-7/picture-7-mobile.jpg"
                       alt="Открытый глянцевый журнал"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -562,6 +695,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-8/picture-8-desktop.webp    1x,
+                        ./images/works/picture-8/picture-8-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-8/picture-8-desktop.jpg    1x,
+                        ./images/works/picture-8/picture-8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-8/picture-8-tablet.webp    1x,
@@ -595,6 +743,7 @@
                     <img
                       src="./images/works/picture-8/picture-8-mobile.jpg"
                       alt="Бирка с названием компании"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -618,6 +767,21 @@
               <a href="" class="works__link">
                 <div class="works__thumb">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/works/picture-9/picture-9-desktop.webp    1x,
+                        ./images/works/picture-9/picture-9-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/picture-9/picture-9-desktop.jpg    1x,
+                        ./images/works/picture-9/picture-9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
                     <source
                       srcset="
                         ./images/works/picture-9/picture-9-tablet.webp    1x,
@@ -651,6 +815,7 @@
                     <img
                       src="./images/works/picture-9/picture-9-mobile.jpg"
                       alt="Человек работает на ноутбуке"
+                      loading="lazy"
                     />
                   </picture>
                   <div class="works__overlay">
@@ -676,7 +841,7 @@
     <!-- Подвал страницы -->
     <footer class="page-footer">
       <div class="container page-footer__inner">
-        <div>
+        <div class="page-footer__address">
           <!-- Логотип компании -->
           <a href="./index.html" class="logo page-footer__logo" lang="en">
             <span class="logo--accent">Web</span>Studio
@@ -789,7 +954,7 @@
               <span class="subscribe__label">E-mail</span>
             </label> -->
 
-            <button class="button button--with-icon" type="submit">
+            <button type="submit" class="button button--with-icon">
               Подписаться
               <svg class="button__icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -800,6 +965,6 @@
       </div>
     </footer>
 
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,3 +1,9 @@
+.subscribe {
+  @include breakpoint($desktop) {
+    display: flex;
+  }
+}
+
 .subscribe__field {
   position: relative;
   // display: block;
@@ -5,6 +11,12 @@
 
   font-size: 16px;
   line-height: 1.25;
+
+  @include breakpoint($desktop) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .subscribe__input {

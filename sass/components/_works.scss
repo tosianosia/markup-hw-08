@@ -14,6 +14,31 @@
     margin: 15px;
   }
 
+  @include breakpoint($desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+    // width: 370px;
+    // width: calc((100% - 60px) / 3);
+    // margin-right: 30px;
+    // margin-bottom: 30px;
+
+    // &:nth-child(3n) {
+    //   margin-right: 0;
+    // }
+
+    // &:nth-last-child(-n + 3) {
+    //   margin-bottom: 0;
+    // }
+
+    // Альтернатива
+    // &:not(:nth-child(3n)) {
+    //   margin-right: 30px;
+    // }
+
+    // &:not(:nth-last-child(-n + 3)) {
+    //   margin-bottom: 30px;
+    // }
+  }
+
   &:not(:last-child) {
     @include limitedWidth($tablet - 1px) {
       margin-bottom: 30px;
@@ -29,7 +54,7 @@
 
   transition: box-shadow 250ms $timing-function;
 
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -121,7 +146,7 @@
   border: 1px solid $border-color;
   border-top: none;
 
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     flex-grow: 1;
   }
 }

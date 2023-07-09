@@ -2,8 +2,23 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @include breakpoint($desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &--secondary {
     background-color: $secondary-bg-color;
+  }
+
+  &--no-top-padding {
+    padding-top: 0;
+  }
+
+  &--is-hidden {
+    @include limitedWidth($desktop - 1px) {
+      display: none;
+    }
   }
 }
 
@@ -15,4 +30,11 @@
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
+
+  @include breakpoint($desktop) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

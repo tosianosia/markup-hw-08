@@ -58,9 +58,8 @@
                 <use href="./images/icons.svg#cross"></use>
               </svg>
             </button>
-
             <!-- Основная навигация -->
-            <nav class="page-header__nav">
+            <nav>
               <!-- Ссылки на другие страницы -->
               <ul class="site-nav">
                 <li class="site-nav__item">
@@ -73,9 +72,9 @@
                   </a>
                 </li>
                 <li class="site-nav__item">
-                  <a href="./portfolio.html" class="site-nav__link"
-                    >Портфолио</a
-                  >
+                  <a href="./portfolio.html" class="site-nav__link">
+                    Портфолио
+                  </a>
                 </li>
                 <li class="site-nav__item">
                   <a href="" class="site-nav__link">Контакты</a>
@@ -91,8 +90,19 @@
                     href="tel:+380961111111"
                     class="contacts-header__link contacts-header__link--tel"
                   >
-                    <svg class="contacts-header__icon" width="10" height="16">
-                      <use href="./images/icons.svg#smartphone"></use>
+                    <svg
+                      class="contacts-header__icon-tablet"
+                      width="10"
+                      height="14"
+                    >
+                      <use href="./images/icons.svg#smartphone-tablet"></use>
+                    </svg>
+                    <svg
+                      class="contacts-header__icon-desktop"
+                      width="10"
+                      height="16"
+                    >
+                      <use href="./images/icons.svg#smartphone-desktop"></use>
                     </svg>
                     +38 096 111 11 11
                   </a>
@@ -102,8 +112,19 @@
                     href="mailto:info@devstudio.com"
                     class="contacts-header__link contacts-header__link--mail"
                   >
-                    <svg class="contacts-header__icon" width="16" height="12">
-                      <use href="./images/icons.svg#envelope"></use>
+                    <svg
+                      class="contacts-header__icon-tablet"
+                      width="14"
+                      height="10"
+                    >
+                      <use href="./images/icons.svg#envelope-tablet"></use>
+                    </svg>
+                    <svg
+                      class="contacts-header__icon-desktop"
+                      width="16"
+                      height="12"
+                    >
+                      <use href="./images/icons.svg#envelope-desktop"></use>
                     </svg>
                     info@devstudio.com
                   </a>
@@ -139,7 +160,7 @@
       <!-- Блок-герой -->
       <section class="hero">
         <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-        <button class="button" type="button" data-modal-open>
+        <button type="button" class="button" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -202,6 +223,94 @@
         </div>
       </section>
 
+      <!-- Чем мы занимаемся -->
+      <section class="section section--no-top-padding section--is-hidden">
+        <div class="container">
+          <h2 class="section__title">Чем мы занимаемся</h2>
+
+          <ul class="gallery">
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-1.webp    1x,
+                    ./images/gallery/img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/img-1.jpg    1x,
+                    ./images/gallery/img-1@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/img-1.jpg"
+                  alt="Разработчик пишет код"
+                  width="370"
+                  loading="lazy"
+                /><!-- в идеале указывать height -->
+              </picture>
+              <div class="gallery__overlay">
+                <h3 class="gallery__title">Десктопные приложения</h3>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-2.webp    1x,
+                    ./images/gallery/img-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/img-2.jpg    1x,
+                    ./images/gallery/img-2@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/img-2.jpg"
+                  alt="Разработчик создаёт кроссплатформенный сайт"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="gallery__overlay">
+                <h3 class="gallery__title">Мобильные приложения</h3>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-3.webp    1x,
+                    ./images/gallery/img-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/img-3.jpg    1x,
+                    ./images/gallery/img-3@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/img-3.jpg"
+                  alt="Разработчик выбирает палитру"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="gallery__overlay">
+                <h3 class="gallery__title">Дизайнерские решения</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Наша команда -->
       <section class="section section--secondary">
         <div class="container">
@@ -210,6 +319,21 @@
           <ul class="team-members">
             <li class="team-members__card">
               <picture>
+                <source
+                  srcset="
+                    ./images/team-members/photo-1/photo-1-desktop.webp    1x,
+                    ./images/team-members/photo-1/photo-1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-1/photo-1-desktop.jpg    1x,
+                    ./images/team-members/photo-1/photo-1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
                 <source
                   srcset="
                     ./images/team-members/photo-1/photo-1-tablet.webp    1x,
@@ -243,6 +367,7 @@
                 <img
                   src="./images/team-members/photo-1/photo-1-mobile.jpg"
                   alt="Фото Игоря Демьяненко"
+                  loading="lazy"
                 />
               </picture>
               <div class="team-members__worker">
@@ -302,6 +427,21 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-2/photo-2-desktop.webp    1x,
+                    ./images/team-members/photo-2/photo-2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-2/photo-2-desktop.jpg    1x,
+                    ./images/team-members/photo-2/photo-2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-2/photo-2-tablet.webp    1x,
                     ./images/team-members/photo-2/photo-2-tablet@2x.webp 2x
                   "
@@ -333,6 +473,7 @@
                 <img
                   src="./images/team-members/photo-2/photo-2-mobile.jpg"
                   alt="Фото Ольги Репиной"
+                  loading="lazy"
                 />
               </picture>
               <div class="team-members__worker">
@@ -394,6 +535,21 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-3/photo-3-desktop.webp    1x,
+                    ./images/team-members/photo-3/photo-3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-3/photo-3-desktop.jpg    1x,
+                    ./images/team-members/photo-3/photo-3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-3/photo-3-tablet.webp    1x,
                     ./images/team-members/photo-3/photo-3-tablet@2x.webp 2x
                   "
@@ -425,6 +581,7 @@
                 <img
                   src="./images/team-members/photo-3/photo-3-mobile.jpg"
                   alt="Фото Николая Тарасова"
+                  loading="lazy"
                 />
               </picture>
               <div class="team-members__worker">
@@ -484,6 +641,21 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team-members/photo-4/photo-4-desktop.webp    1x,
+                    ./images/team-members/photo-4/photo-4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-members/photo-4/photo-4-desktop.jpg    1x,
+                    ./images/team-members/photo-4/photo-4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
                     ./images/team-members/photo-4/photo-4-tablet.webp    1x,
                     ./images/team-members/photo-4/photo-4-tablet@2x.webp 2x
                   "
@@ -515,6 +687,7 @@
                 <img
                   src="./images/team-members/photo-4/photo-4-mobile.jpg"
                   alt="Фото Михаила Ермакова"
+                  loading="lazy"
                 />
               </picture>
               <div class="team-members__worker">
@@ -654,7 +827,7 @@
     <!-- Подвал страницы -->
     <footer class="page-footer">
       <div class="container page-footer__inner">
-        <div>
+        <div class="page-footer__address">
           <!-- Логотип компании -->
           <a href="./index.html" class="logo page-footer__logo" lang="en">
             <span class="logo--accent">Web</span>Studio
@@ -767,7 +940,7 @@
               <span class="subscribe__label">E-mail</span>
             </label> -->
 
-            <button class="button button--with-icon" type="submit">
+            <button type="submit" class="button button--with-icon">
               Подписаться
               <svg class="button__icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -782,7 +955,7 @@
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
         <!-- Кнопка закрытия модального окна -->
-        <button class="btn-close" type="button" data-modal-close>
+        <button type="button" class="btn-close" data-modal-close>
           <svg class="btn-close__icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -855,14 +1028,14 @@
             </span>
           </label>
 
-          <button class="button button--centered" type="submit">
+          <button type="submit" class="button button--centered">
             Отправить
           </button>
         </form>
       </div>
     </div>
 
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

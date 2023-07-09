@@ -1,15 +1,25 @@
 .contacts-footer {
   @extend %list;
   margin-top: 8px;
+
+  @include breakpoint($desktop) {
+    margin-top: 9px;
+  }
 }
 
 .contacts-footer__item {
   &:not(:last-child) {
     margin-bottom: 8px;
+
+    @include breakpoint($desktop) {
+      margin-bottom: 9px;
+    }
   }
 }
 
 .contacts-footer__link {
   color: $footer-link-color;
+
+  line-height: 1.71;
   text-decoration: none;
 }
